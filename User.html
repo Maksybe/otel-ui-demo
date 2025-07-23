@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kullanıcı Tanımı</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 py-10">
+  <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h2 class="text-2xl font-bold mb-6 text-center">👤 Kullanıcı Tanımı ve Yetki Atama</h2>
+
+    <form>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Ad Soyad</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="Örn: Ahmet Yılmaz" />
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">E-posta</label>
+          <input type="email" class="w-full border rounded px-3 py-2" placeholder="Örn: ahmet@otel.com" />
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="block font-semibold mb-1">Yetkili Olduğu Birim</label>
+          <select class="w-full border rounded px-3 py-2">
+            <option>Otel A</option>
+            <option>Kat 1</option>
+            <option>Oda 101</option>
+            <option>Bahçe</option>
+          </select>
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="block font-semibold mb-1">Rol</label>
+          <select class="w-full border rounded px-3 py-2">
+            <option>Manager</option>
+            <option>Staff</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end space-x-3">
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Kaydet</button>
+        <button type="reset" class="bg-gray-300 px-6 py-2 rounded hover:bg-gray-400">Vazgeç</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

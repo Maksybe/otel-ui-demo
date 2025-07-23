@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birim Tanımı</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 py-10">
+  <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h2 class="text-2xl font-bold mb-6 text-center">🏨 Birim (Unit) Tanımı</h2>
+
+    <form>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Birim Adı</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="Örn: Kat 1, Oda 101, Havuz" />
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Birim Tipi</label>
+          <select class="w-full border rounded px-3 py-2">
+            <option>Hotel</option>
+            <option>Floor</option>
+            <option>Room</option>
+            <option>Garden</option>
+            <option>Pool</option>
+            <option>Department</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Üst Birim</label>
+          <select class="w-full border rounded px-3 py-2">
+            <option>Kök (Bağlı değil)</option>
+            <option>Otel A</option>
+            <option>Kat 1</option>
+            <option>Kat 2</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Hiyerarşik Kod</label>
+          <input type="text" class="w-full border rounded px-3 py-2" placeholder="Otomatik üretilebilir (örn: 1.2.3)" disabled />
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Aktif mi?</label>
+          <select class="w-full border rounded px-3 py-2">
+            <option value="1">Evet</option>
+            <option value="0">Hayır</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end space-x-3">
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Ekle</button>
+        <button type="reset" class="bg-gray-300 px-6 py-2 rounded hover:bg-gray-400">Vazgeç</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
