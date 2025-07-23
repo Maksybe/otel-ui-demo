@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görev Oluşturma Sihirbazı</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-xl mx-auto bg-white shadow-md rounded-lg p-6">
+    <h1 class="text-2xl font-bold mb-4 text-center">🪄 Görev Oluşturma Sihirbazı</h1>
+
+    <form id="wizardForm" class="space-y-6">
+      <!-- Adım 1: Birim Seçimi -->
+      <div id="step1">
+        <h2 class="text-lg font-semibold mb-2">1. Hangi birim için görev oluşturulacak?</h2>
+        <select class="w-full border rounded px-3 py-2">
+          <option>Kat 1</option>
+          <option>Kat 2</option>
+          <option>Villa 1</option>
+          <option>Ortak Alan</option>
+        </select>
+      </div>
+
+      <!-- Adım 2: Şablon Seçimi -->
+      <div id="step2" class="hidden">
+        <h2 class="text-lg font-semibold mb-2">2. Hangi görev şablonu kullanılacak?</h2>
+        <select class="w-full border rounded px-3 py-2">
+          <option>Günlük Temizlik</option>
+          <option>Mini Bar Kontrol</option>
+          <option>Teknik Bakım</option>
+          <option>Dezenfeksiyon</option>
+        </select>
+      </div>
+
+      <!-- Adım 3: Kime Atanacak? -->
+      <div id="step3" class="hidden">
+        <h2 class="text-lg font-semibold mb-2">3. Görev kim(ler)e atanacak?</h2>
+        <select class="w-full border rounded px-3 py-2">
+          <option>Merve Uçar</option>
+          <option>Ahmet Dede</option>
+          <option>Fatma Altın</option>
+        </select>
+      </div>
+
+      <!-- Adım 4: Onay ve Önizleme -->
+      <div id="step4" class="hidden">
+        <h2 class="text-lg font-semibold mb-2">4. Önizleme</h2>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li><strong>Birim:</strong> Kat 1</li>
+          <li><strong>Şablon:</strong> Günlük Temizlik</li>
+          <li><strong>Atanan:</strong> Merve Uçar</li>
+        </ul>
+        <button type="submit" class="mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Görevi Oluştur</button>
+      </div>
+
+      <div class="flex justify-between mt-4">
+        <button type="button" id="prevBtn" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400" disabled>Geri</button>
+        <button type="button" id="nextBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">İleri</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const steps = ['step1', 'step2', 'step3', 'step4'];
+    let currentStep = 0;
+
+    const showStep = (index) => {
+      steps.forEach((id, i) => {
+        document.getElementById(id).classList.toggle('hidden', i !== index);
+      });
+      document.getElementById('prevBtn').disabled = index === 0;
+      document.getElementById('nextBtn').textContent = index === steps.length - 1 ? 'Tamam' : 'İleri';
+    };
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentStep > 0) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    showStep(currentStep);
+  </script>
+</body>
+</html>
