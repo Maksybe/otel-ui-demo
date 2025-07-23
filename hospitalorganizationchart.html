@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Özel Şifa Hastanesi - Organizasyon Şeması</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tree ul {
+      padding-left: 1rem;
+      position: relative;
+    }
+    .tree ul::before {
+      content: '';
+      border-left: 2px solid #cbd5e1;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    .tree li {
+      margin: 0.5rem 0;
+      padding-left: 1rem;
+      position: relative;
+      list-style-type: none;
+    }
+    .tree li::before {
+      content: '';
+      border-top: 2px solid #cbd5e1;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      width: 1rem;
+    }
+    .user {
+      color: #4b5563;
+      font-style: italic;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 py-10">
+  <div class="max-w-6xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h1 class="text-3xl font-bold mb-6 text-center">🏥 Özel Şifa Hastanesi - Organizasyon Şeması</h1>
+
+    <div class="tree text-gray-900 text-sm">
+      <ul>
+        <li>Özel Şifa Hastanesi
+          <ul>
+            <li>Yapılar
+              <ul>
+                <li>Ana Bina
+                  <ul>
+                    <li>Zemin Kat
+                      <ul>
+                        <li>Acil Servis <span class="user">(Koordinatör: Dr. Cem Kaya)</span></li>
+                        <li>Radyoloji <span class="user">(Teknisyen: Elif Sarp)</span></li>
+                      </ul>
+                    </li>
+                    <li>1. Kat
+                      <ul>
+                        <li>Dahiliye Polikliniği <span class="user">(Dr. Yusuf Kaya)</span></li>
+                        <li>Kardiyoloji Polikliniği <span class="user">(Dr. Meltem Çelik)</span></li>
+                      </ul>
+                    </li>
+                    <li>2. Kat
+                      <ul>
+                        <li>Kadın Doğum Servisi <span class="user">(Dr. Esra Güneş)</span></li>
+                        <li>Yenidoğan Yoğun Bakım <span class="user">(Hemşire: Ayşe Demir)</span></li>
+                      </ul>
+                    </li>
+                    <li>3. Kat
+                      <ul>
+                        <li>Genel Yoğun Bakım <span class="user">(Dr. Erman Tuncel)</span></li>
+                        <li>Ameliyathaneler <span class="user">(Koordinatör: Dr. İsmail Uğur)</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Ek Bina
+                  <ul>
+                    <li>Laboratuvarlar <span class="user">(Sorumlu: Biyokimya Uz. Emre Yıldız)</span></li>
+                    <li>İdari Ofisler <span class="user">(İK Uzmanı: Zeynep Yıldız)</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Departmanlar
+              <ul>
+                <li>Tıbbi Direktörlük
+                  <ul>
+                    <li>Başhekim <span class="user">Dr. Ayla Aksoy</span></li>
+                    <li>Kalite Birimi <span class="user">(Uzman: Gülşah Temiz)</span></li>
+                  </ul>
+                </li>
+                <li>Klinik Personel
+                  <ul>
+                    <li>Dahiliye Uzmanı <span class="user">Dr. Yusuf Kaya</span></li>
+                    <li>Kadın Doğum Uzmanı <span class="user">Dr. Esra Güneş</span></li>
+                    <li>Hemşireler <span class="user">Ayşe Demir, Zeynep Uçar</span></li>
+                  </ul>
+                </li>
+                <li>Teknik Birimler
+                  <ul>
+                    <li>Laboratuvar Sorumlusu <span class="user">Emre Yıldız</span></li>
+                    <li>Radyoloji Teknisyeni <span class="user">Elif Sarp</span></li>
+                  </ul>
+                </li>
+                <li>Yönetim ve İdari
+                  <ul>
+                    <li>Hastane Müdürü <span class="user">Ali Kılıç</span></li>
+                    <li>Muhasebe <span class="user">(Yetkili: Selim Gök)</span></li>
+                    <li>İnsan Kaynakları <span class="user">(Uzman: Zeynep Yıldız)</span></li>
+                    <li>Sekreterya <span class="user">(Asistan: Gülçin Albayrak)</span></li>
+                  </ul>
+                </li>
+                <li>Destek Hizmetler
+                  <ul>
+                    <li>Temizlik <span class="user">(Şef: Fatma Tüfek)</span></li>
+                    <li>Güvenlik <span class="user">(Amir: Mustafa Eker)</span></li>
+                    <li>Yemekhane <span class="user">(Usta: Fikret Koç)</span></li>
+                    <li>Teknik Servis <span class="user">(Bakımcı: Onur Aydın)</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
