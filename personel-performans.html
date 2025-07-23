@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personel Performans Paneli</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">👥 Personel Performans Paneli</h1>
+
+    <div class="overflow-x-auto bg-white rounded shadow">
+      <table class="min-w-full text-sm text-left text-gray-700">
+        <thead class="text-xs uppercase bg-gray-100">
+          <tr>
+            <th class="px-6 py-3">Ad Soyad</th>
+            <th class="px-6 py-3">Görev Rolü</th>
+            <th class="px-6 py-3">Bugün Tamamlanan</th>
+            <th class="px-6 py-3">Geciken Görev</th>
+            <th class="px-6 py-3">Ortalama Süre</th>
+            <th class="px-6 py-3">Toplam Puan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="px-6 py-4 flex items-center gap-2">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" class="w-6 h-6 rounded-full" />
+              Merve Uçar
+            </td>
+            <td class="px-6 py-4">Temizlikçi</td>
+            <td class="px-6 py-4">6</td>
+            <td class="px-6 py-4">1</td>
+            <td class="px-6 py-4">12 dk</td>
+            <td class="px-6 py-4 font-bold text-green-600">92</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-6 py-4 flex items-center gap-2">
+              <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-6 h-6 rounded-full" />
+              Ahmet Dede
+            </td>
+            <td class="px-6 py-4">Temizlikçi</td>
+            <td class="px-6 py-4">5</td>
+            <td class="px-6 py-4">2</td>
+            <td class="px-6 py-4">15 dk</td>
+            <td class="px-6 py-4 font-bold text-yellow-600">75</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 flex items-center gap-2">
+              <img src="https://randomuser.me/api/portraits/women/22.jpg" class="w-6 h-6 rounded-full" />
+              Fatma Altın
+            </td>
+            <td class="px-6 py-4">Temizlikçi</td>
+            <td class="px-6 py-4">7</td>
+            <td class="px-6 py-4">0</td>
+            <td class="px-6 py-4">10 dk</td>
+            <td class="px-6 py-4 font-bold text-green-700">97</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm text-gray-500 mt-4 text-center">Veriler günlük bazda güncellenmektedir.</p>
+  </div>
+</body>
+</html>
