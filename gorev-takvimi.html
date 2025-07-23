@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görev Takvimi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1px;
+    }
+    .day {
+      background: #fff;
+      padding: 1rem;
+      height: 100px;
+      border: 1px solid #e5e7eb;
+      position: relative;
+    }
+    .task {
+      font-size: 0.75rem;
+      background: #facc15;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      margin-top: 0.25rem;
+      display: block;
+    }
+    .task.done {
+      background: #4ade80;
+      color: #064e3b;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">📅 Görev Takvimi – Temmuz 2025</h1>
+
+    <div class="grid grid-cols-7 text-sm text-center font-semibold text-gray-600 mb-2">
+      <div>Pzt</div><div>Sal</div><div>Çar</div><div>Per</div><div>Cum</div><div>Cmt</div><div>Min</div>
+    </div>
+
+    <div class="calendar">
+      <!-- boş hücreler -->
+      <div></div><div></div><div></div><div></div>
+      <!-- 1 - 7 Temmuz -->
+      <div class="day">1</div>
+      <div class="day">2</div>
+      <div class="day">3 <span class="task">Oda 101 Temizlik</span></div>
+      <div class="day">4 <span class="task done">Denetim</span></div>
+      <div class="day">5</div>
+      <div class="day">6</div>
+      <div class="day">7</div>
+
+      <!-- 8 - 14 -->
+      <div class="day">8</div>
+      <div class="day">9</div>
+      <div class="day">10 <span class="task">Çamaşırhane Bakımı</span></div>
+      <div class="day">11</div>
+      <div class="day">12 <span class="task">Oda 104 Mini Bar</span></div>
+      <div class="day">13</div>
+      <div class="day">14</div>
+
+      <!-- devam eden günler -->
+      <div class="day">15 <span class="task">Villa 2 Bahçe Kontrol</span></div>
+      <div class="day">16</div>
+      <div class="day">17 <span class="task done">Ortak Alan Dezenfekte</span></div>
+      <div class="day">18</div>
+      <div class="day">19</div>
+      <div class="day">20</div>
+      <div class="day">21</div>
+    </div>
+  </div>
+</body>
+</html>
