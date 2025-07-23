@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Luxe Hotel - Yapı ve Departman Organizasyon Şeması</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tree ul {
+      padding-left: 1rem;
+      position: relative;
+    }
+    .tree ul::before {
+      content: '';
+      border-left: 2px solid #cbd5e1;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    .tree li {
+      margin: 0.5rem 0;
+      padding-left: 1rem;
+      position: relative;
+      list-style-type: none;
+    }
+    .tree li::before {
+      content: '';
+      border-top: 2px solid #cbd5e1;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      width: 1rem;
+    }
+    .user { color: #4b5563; font-style: italic; font-size: 0.875rem; }
+  </style>
+</head>
+<body class="bg-gray-100 py-10">
+  <div class="max-w-7xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h1 class="text-3xl font-bold mb-6 text-center">🏨 Grand Luxe Hotel - Tüm Yapı ve Departman Şeması</h1>
+
+    <div class="tree text-gray-900 text-sm">
+      <ul>
+        <li>Grand Luxe Hotel
+          <ul>
+            <li>Yapılar
+              <ul>
+                <li>Ana Bina
+                  <ul>
+                    <li>Kat 1
+                      <ul>
+                        <li>Oda 101</li>
+                        <li>Oda 102</li>
+                        <li>Oda 103</li>
+                      </ul>
+                    </li>
+                    <li>Kat 2
+                      <ul>
+                        <li>Oda 201</li>
+                        <li>Oda 202</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Ek Bina
+                  <ul>
+                    <li>Kat 1
+                      <ul>
+                        <li>Oda E101</li>
+                        <li>Oda E102</li>
+                      </ul>
+                    </li>
+                    <li>Kat 2
+                      <ul>
+                        <li>Oda E201</li>
+                        <li>Oda E202</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Villa Bölgesi
+                  <ul>
+                    <li>Villa 1 <span class="user">(VIP)</span></li>
+                    <li>Villa 2 <span class="user">(Aile)</span></li>
+                    <li>Villa 3 <span class="user">(Honeymoon)</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Departmanlar
+              <ul>
+                <li>Yönetim
+                  <ul>
+                    <li>Genel Müdür <span class="user">Ayşe Karaca</span></li>
+                    <li>Muhasebe Müdürü <span class="user">Serkan Gün</span></li>
+                    <li>İK Müdürü <span class="user">Zeynep Yıldız</span></li>
+                  </ul>
+                </li>
+                <li>Ön Büro
+                  <ul>
+                    <li>Ön Büro Müdürü <span class="user">Süleyman Yiğit</span></li>
+                    <li>Gece Resepsiyonu <span class="user">Ali Naz</span></li>
+                  </ul>
+                </li>
+                <li>Housekeeping
+                  <ul>
+                    <li>Şef <span class="user">Emine Koç</span></li>
+                    <li>Temizlikçi <span class="user">Merve Uçar</span></li>
+                    <li>Çamaşırhane Sorumlusu <span class="user">Hakan Can</span></li>
+                  </ul>
+                </li>
+                <li>Teknik Servis
+                  <ul>
+                    <li>Elektrik Teknisyeni <span class="user">Ramazan Kurt</span></li>
+                    <li>İnşaat Sorumlusu <span class="user">Veli Şahin</span></li>
+                  </ul>
+                </li>
+                <li>Gıda ve İçecek
+                  <ul>
+                    <li>Aşçıbaşı <span class="user">Mehmet Can</span></li>
+                    <li>Garson <span class="user">Elif Taş</span></li>
+                  </ul>
+                </li>
+                <li>Spa & Wellness
+                  <ul>
+                    <li>Terapist <span class="user">Aysun Duru</span></li>
+                    <li>Fitness Eğitmeni <span class="user">Erhan Yiğit</span></li>
+                  </ul>
+                </li>
+                <li>Güvenlik
+                  <ul>
+                    <li>Güvenlik Şefi <span class="user">Mustafa Eker</span></li>
+                    <li>Nöbetçi Güvenlik <span class="user">Berk Koca</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
