@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otel Giriş Ekranı</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white shadow-md rounded-lg p-8 max-w-md w-full">
+    <h1 class="text-2xl font-bold text-center mb-6">🔐 Otel Yönetim Paneline Giriş</h1>
+
+    <form class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">E-posta</label>
+        <input type="email" class="w-full mt-1 px-3 py-2 border rounded" placeholder="ornek@otel.com" required />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Şifre</label>
+        <input type="password" class="w-full mt-1 px-3 py-2 border rounded" placeholder="••••••••" required />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Rol Seçin</label>
+        <select class="w-full mt-1 px-3 py-2 border rounded" required>
+          <option value="">Bir rol seçin</option>
+          <option value="manager">👔 Yönetici</option>
+          <option value="staff">👨‍🔧 Personel</option>
+          <option value="cleaner">🧹 Temizlikçi</option>
+        </select>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Giriş Yap</button>
+    </form>
+
+    <p class="text-center text-sm text-gray-500 mt-4">Sadece yetkili kullanıcılar giriş yapabilir.</p>
+  </div>
+</body>
+</html>
