@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raporlama ve Dışa Aktarım</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">📤 Günlük Görev Raporu – 24 Temmuz 2025</h1>
+
+    <!-- Butonlar -->
+    <div class="flex justify-end gap-4 mb-4">
+      <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">📄 PDF Olarak İndir</button>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">📊 Excel'e Aktar</button>
+    </div>
+
+    <!-- Rapor Tablosu -->
+    <div class="overflow-x-auto bg-white rounded shadow">
+      <table class="min-w-full text-sm text-left text-gray-700">
+        <thead class="text-xs uppercase bg-gray-100">
+          <tr>
+            <th class="px-6 py-3">Görev</th>
+            <th class="px-6 py-3">Birim</th>
+            <th class="px-6 py-3">Atanan</th>
+            <th class="px-6 py-3">Durum</th>
+            <th class="px-6 py-3">Tamamlandı</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="px-6 py-4">Oda 101 Temizlik</td>
+            <td class="px-6 py-4">Kat 1</td>
+            <td class="px-6 py-4">Merve Uçar</td>
+            <td class="px-6 py-4">Tamamlandı</td>
+            <td class="px-6 py-4">10:35</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-6 py-4">Mini Bar Kontrol</td>
+            <td class="px-6 py-4">Kat 1</td>
+            <td class="px-6 py-4">Ahmet Dede</td>
+            <td class="px-6 py-4">Devam Ediyor</td>
+            <td class="px-6 py-4">—</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4">Villa 2 Bahçe Sulama</td>
+            <td class="px-6 py-4">Villa Bölgesi</td>
+            <td class="px-6 py-4">Fatma Altın</td>
+            <td class="px-6 py-4">Gecikti</td>
+            <td class="px-6 py-4">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm text-gray-500 mt-4 text-center">Bu rapor sadece 24 Temmuz 2025 tarihli görevleri içermektedir.</p>
+  </div>
+</body>
+</html>
