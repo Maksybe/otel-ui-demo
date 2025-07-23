@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gün Sonu Özeti</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">📅 Gün Sonu Özeti – 24 Temmuz 2025</h1>
+
+    <!-- Genel Durum -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+      <div class="bg-white p-4 rounded shadow text-center">
+        <p class="text-gray-500">Toplam Görev</p>
+        <p class="text-2xl font-bold">52</p>
+      </div>
+      <div class="bg-green-100 p-4 rounded shadow text-center">
+        <p class="text-gray-600">Tamamlandı</p>
+        <p class="text-2xl font-bold">41</p>
+      </div>
+      <div class="bg-yellow-100 p-4 rounded shadow text-center">
+        <p class="text-gray-600">Devam Eden</p>
+        <p class="text-2xl font-bold">7</p>
+      </div>
+      <div class="bg-red-100 p-4 rounded shadow text-center">
+        <p class="text-gray-600">Geciken</p>
+        <p class="text-2xl font-bold">4</p>
+      </div>
+    </div>
+
+    <!-- En Aktif Personeller -->
+    <div class="bg-white rounded shadow p-6 mb-8">
+      <h2 class="text-xl font-semibold mb-4">🏅 En Aktif 3 Personel</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li>🥇 <strong>Merve Uçar</strong> – 9 görev tamamladı</li>
+        <li>🥈 <strong>Ahmet Dede</strong> – 8 görev tamamladı</li>
+        <li>🥉 <strong>Fatma Altın</strong> – 7 görev tamamladı</li>
+      </ul>
+    </div>
+
+    <!-- Eksik/Geciken Görevler -->
+    <div class="bg-white rounded shadow p-6">
+      <h2 class="text-xl font-semibold mb-4">⚠️ Eksik veya Geciken Görevler</h2>
+      <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+        <li>Oda 201 – Banyo temizliği (Gecikmiş)</li>
+        <li>Oda 301 – Havlu değişimi (Hâlâ tamamlanmadı)</li>
+        <li>Villa 2 – Bahçe sulama (Süresi geçti)</li>
+        <li>Çamaşırhane – Malzeme kontrolü (İptal edildi)</li>
+      </ul>
+    </div>
+
+    <p class="mt-6 text-center text-sm text-gray-500">Bu özet yalnızca 24 Temmuz 2025 gününü kapsamaktadır.</p>
+  </div>
+</body>
+</html>
