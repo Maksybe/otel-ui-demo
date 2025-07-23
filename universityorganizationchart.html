@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Özel Başarı Üniversitesi - Organizasyon Şeması</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tree ul {
+      padding-left: 1rem;
+      position: relative;
+    }
+    .tree ul::before {
+      content: '';
+      border-left: 2px solid #cbd5e1;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    .tree li {
+      margin: 0.5rem 0;
+      padding-left: 1rem;
+      position: relative;
+      list-style-type: none;
+    }
+    .tree li::before {
+      content: '';
+      border-top: 2px solid #cbd5e1;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      width: 1rem;
+    }
+    .user {
+      color: #4b5563;
+      font-style: italic;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 py-10">
+  <div class="max-w-6xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h1 class="text-3xl font-bold mb-6 text-center">🎓 Özel Başarı Üniversitesi - Organizasyon Şeması</h1>
+
+    <div class="tree text-gray-900 text-sm">
+      <ul>
+        <li>Özel Başarı Üniversitesi
+          <ul>
+            <li>Kampüsler
+              <ul>
+                <li>Merkez Kampüs
+                  <ul>
+                    <li>A Blok
+                      <ul>
+                        <li>1. Kat
+                          <ul>
+                            <li>Rektörlük <span class="user">(Rektör: Prof. Dr. Levent Erdem)</span></li>
+                            <li>Senato Salonu</li>
+                          </ul>
+                        </li>
+                        <li>2. Kat
+                          <ul>
+                            <li>İdari Ofisler</li>
+                            <li>İnsan Kaynakları <span class="user">(Birim Yöneticisi: Dilek Uçar)</span></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>B Blok
+                      <ul>
+                        <li>Bilgisayar Mühendisliği Bölümü
+                          <ul>
+                            <li>Derslik B201</li>
+                            <li>Laboratuvar B202 <span class="user">(Sorumlu: Öğr. Gör. Can Yılmaz)</span></li>
+                            <li>Akademik Danışmanlık <span class="user">(Dr. Öğr. Üyesi Eda Demir)</span></li>
+                          </ul>
+                        </li>
+                        <li>Elektrik-Elektronik Mühendisliği Bölümü</li>
+                      </ul>
+                    </li>
+                    <li>Spor Kompleksi
+                      <ul>
+                        <li>Fitness Salonu</li>
+                        <li>Kapalı Spor Salonu</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Ek Kampüs - Sağlık Bilimleri
+                  <ul>
+                    <li>Hemşirelik Bölümü</li>
+                    <li>Fizyoterapi Bölümü</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Fakülteler
+              <ul>
+                <li>Mühendislik Fakültesi
+                  <ul>
+                    <li>Dekanlık <span class="user">(Prof. Dr. Arif Kaplan)</span></li>
+                    <li>Bölümler
+                      <ul>
+                        <li>Bilgisayar Mühendisliği</li>
+                        <li>Elektrik-Elektronik Mühendisliği</li>
+                        <li>Makine Mühendisliği</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>İktisadi ve İdari Bilimler Fakültesi</li>
+                <li>Sağlık Bilimleri Fakültesi</li>
+              </ul>
+            </li>
+            <li>Ortak Alanlar ve Görev Atanabilir Birimler
+              <ul>
+                <li>Kütüphane <span class="user">(Sorumlu: Hasan Batur)</span></li>
+                <li>Bilgi İşlem Merkezi <span class="user">(Sistem Yöneticisi: Barış Polat)</span></li>
+                <li>Temizlik Hizmetleri <span class="user">(Şef: Mehtap Doğan)</span></li>
+                <li>Güvenlik Birimi <span class="user">(Amir: Murat Ceylan)</span></li>
+                <li>Destek Hizmetler</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
