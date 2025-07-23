@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otel Görev Haritası</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .room {
+      cursor: pointer;
+      transition: fill 0.2s;
+    }
+    .room:hover {
+      fill: #facc15;
+    }
+    .task-completed {
+      fill: #4ade80;
+    }
+    .task-pending {
+      fill: #f87171;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-4xl mx-auto bg-white rounded shadow p-6">
+    <h1 class="text-2xl font-bold mb-4 text-center">🗺️ Otel Görev Haritası – Kat 1 Planı</h1>
+    <svg viewBox="0 0 600 400" class="w-full h-auto border rounded">
+      <!-- Oda 101 -->
+      <rect x="50" y="50" width="120" height="80" class="room task-pending" />
+      <text x="60" y="95" fill="#111827" font-size="14">Oda 101</text>
+
+      <!-- Oda 102 -->
+      <rect x="200" y="50" width="120" height="80" class="room task-completed" />
+      <text x="210" y="95" fill="#111827" font-size="14">Oda 102</text>
+
+      <!-- Oda 103 -->
+      <rect x="350" y="50" width="120" height="80" class="room task-pending" />
+      <text x="360" y="95" fill="#111827" font-size="14">Oda 103</text>
+
+      <!-- Oda 104 -->
+      <rect x="50" y="180" width="120" height="80" class="room task-completed" />
+      <text x="60" y="225" fill="#111827" font-size="14">Oda 104</text>
+
+      <!-- Oda 105 -->
+      <rect x="200" y="180" width="120" height="80" class="room task-pending" />
+      <text x="210" y="225" fill="#111827" font-size="14">Oda 105</text>
+
+      <!-- Ortak Alan -->
+      <rect x="350" y="180" width="120" height="80" class="room task-completed" />
+      <text x="360" y="225" fill="#111827" font-size="14">Koridor</text>
+    </svg>
+
+    <div class="mt-6 text-sm text-gray-600">
+      <p><span class="inline-block w-4 h-4 bg-green-400 mr-2"></span>Tamamlanan Görev</p>
+      <p><span class="inline-block w-4 h-4 bg-red-400 mr-2"></span>Bekleyen Görev</p>
+    </div>
+  </div>
+</body>
+</html>
