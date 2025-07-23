@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bildirim ve Uyarılar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-50 p-6">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold text-center text-red-700 mb-6">🚨 Anlık Uyarı ve Bildirimler</h1>
+
+    <!-- Geciken Görevler -->
+    <div class="bg-white rounded shadow p-6 mb-6">
+      <h2 class="text-xl font-semibold text-red-600 mb-3">⏰ Geciken Görevler</h2>
+      <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+        <li><strong>Villa 3 – Havuz temizliği</strong> (Gecikme: 2 saat)</li>
+        <li><strong>Kat 2 – Oda 203 Havlu değişimi</strong> (Gecikme: 1 saat 20 dk)</li>
+        <li><strong>Ortak Alan – Asansör temizliği</strong> (Gecikme: 3 saat)</li>
+      </ul>
+    </div>
+
+    <!-- Tamamlanmamış Kontroller -->
+    <div class="bg-white rounded shadow p-6 mb-6">
+      <h2 class="text-xl font-semibold text-yellow-600 mb-3">🔎 Tamamlanmamış Kontroller</h2>
+      <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+        <li><strong>Kat 1 – Yangın Söndürücü</strong> kontrolü yapılmadı</li>
+        <li><strong>Villa 2 – Kapı sensörü</strong> kontrolü eksik</li>
+        <li><strong>Çamaşırhane – Havalandırma filtresi</strong> kontrol edilmedi</li>
+      </ul>
+    </div>
+
+    <!-- Tekrarlayan Uyarılar -->
+    <div class="bg-white rounded shadow p-6">
+      <h2 class="text-xl font-semibold text-orange-500 mb-3">⚠️ Tekrarlayan Uyarılar</h2>
+      <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+        <li>📌 <strong>Oda 104</strong> son 5 gündür minibar eksik</li>
+        <li>📌 <strong>Kat 3 – Koridor lambası</strong> 3. kez bildirim aldı</li>
+        <li>📌 <strong>Villa 1 – Bahçe sulama</strong> 2 gün üst üste yapılmadı</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
