@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Yıllık Gelir Tahmini & Motivasyon Paneli</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white min-h-screen p-8">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-4xl font-bold text-center text-blue-800 mb-4">🚀 Ortaklar için 5 Yıllık Başarı Panosu</h1>
+    <p class="text-center text-gray-600 mb-8">Hayal ettiğimiz yerden başladık, birlikte inşa ediyoruz. Bu sadece bir başlangıç. ✨</p>
+
+    <!-- Özet Kutuları -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+      <div class="bg-white shadow rounded-lg p-4 text-center">
+        <p class="text-sm text-gray-500">Bu Yıl Tahmini Hasılat</p>
+        <p class="text-2xl font-bold text-green-600">₺4.250.000</p>
+      </div>
+      <div class="bg-white shadow rounded-lg p-4 text-center">
+        <p class="text-sm text-gray-500">Sözleşmeli Müşteri</p>
+        <p class="text-2xl font-bold">42</p>
+      </div>
+      <div class="bg-white shadow rounded-lg p-4 text-center">
+        <p class="text-sm text-gray-500">Kar Oranı (Net)</p>
+        <p class="text-2xl font-bold text-blue-600">%64</p>
+      </div>
+      <div class="bg-white shadow rounded-lg p-4 text-center">
+        <p class="text-sm text-gray-500">Kullanım Oranı</p>
+        <p class="text-2xl font-bold text-indigo-600">%82</p>
+      </div>
+    </div>
+
+    <!-- 5 Yıllık Gelir Tahmini -->
+    <div class="bg-white shadow rounded-lg p-6 mb-10">
+      <h2 class="text-xl font-semibold text-gray-700 mb-4">📈 5 Yıllık Yıllık Gelir Tahmini</h2>
+      <canvas id="revenueChart" height="100"></canvas>
+    </div>
+
+    <!-- Motive Edici Notlar -->
+    <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded">
+      <h3 class="text-lg font-bold text-blue-700 mb-2">💡 Notlar & Hedefler</h3>
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+        <li>2026 hedefi: 80+ aktif kurum (otel/hastane/okul)</li>
+        <li>2027 itibariyle yurt dışı (Balkanlar veya MENA bölgesi) açılımı</li>
+        <li>Gelirlerin %30’u pasif SaaS modeliyle gelmeye başladı bile</li>
+        <li>Oluşturulan her bir “checklist” artık tekrarlayan gelir anlamına geliyor</li>
+        <li>Yıl sonunda ortak kar payı tahmini: ₺1.200.000+</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2024', '2025', '2026', '2027', '2028'],
+        datasets: [{
+          label: 'Yıllık Hasılat (₺)',
+          data: [320000, 4250000, 7350000, 10400000, 13800000],
+          borderColor: '#10b981',
+          backgroundColor: 'rgba(16, 185, 129, 0.2)',
+          tension: 0.4,
+          fill: true,
+          pointRadius: 5,
+          pointHoverRadius: 7
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: value => `₺${value.toLocaleString('tr-TR')}`
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
