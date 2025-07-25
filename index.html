@@ -3,42 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <title>Otel UI Demo</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+    }
+
+    h2 {
+      color: #fff;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    /* Flow Chart */
+    .flow-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    .flow-step {
+      background-color: #1c1c1c;
+      color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-weight: bold;
+      position: relative;
+      text-align: center;
+      min-width: 180px;
+      box-shadow: 0 0 8px #6859ff;
+      transition: transform 0.2s ease;
+    }
+
+    .flow-step:hover {
+      transform: scale(1.05);
+    }
+
+    .flow-step::after {
+      content: "→";
+      position: absolute;
+      right: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6859ff;
+      font-size: 24px;
+    }
+
+    .flow-step:last-child::after {
+      content: "";
+    }
+
+    .flow-step a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Tree Menu */
+    ul.tree {
+      list-style: none;
+      padding-left: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    ul.tree li {
+      margin: 5px 0;
+      position: relative;
+    }
+
+    ul.tree li::before {
+      content: "▸";
+      position: absolute;
+      left: -15px;
+      color: #6859ff;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ccc;
+      padding: 4px 0;
+      display: inline-block;
+    }
+
+    a:hover {
+      color: #6859ff;
+    }
+
+    .subgroup {
+      margin-left: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Sezgin's design</h2>
-  <ul>
-    <li><a href="login2.html">Login</a></li>
-    <li><a href="signup.html">Yeni Üyelik</a></li>
-    <li><a href="forgot-password.html">Parolamı unuttum</a></li>
-    <li><a href="password-reset-sent.html">Parola gönderildi maili</a></li>
-    <li><a href="reset-password-mail-template.html">Parola Yenileme maili</a></li>
-    <li><a href="registration-success.html">Üyelik Başarılı maili</a></li>
-  </ul>
-  <h2>Others for idea</h2>
-  <ul>
-    <li><a href="Organization.html">Organizasyon Kaydı</a></li>
-    <li><a href="Unit.html">Birim Tanımı</a></li>
-    <li><a href="User.html">Kullanıcı Tanımı</a></li>
-    <li><a href="Checklist.html">Checklist Şablonu</a></li>
-    <li><a href="ChecklistSchedule.html">Checklist Zamanlama</a></li>
-    <li><a href="TaskDetail.html">Görev Detayı</a></li>
-    <li><a href="taskboard-ana-bina-kat1.html">Görev Panosu - Ana Bina Kat 1</a></li>
+
+  <!-- Sezgin's Design Flow -->
+  <h2>Sezgin'in Tasarımı (Akış)</h2>
+  <div class="flow-container">
+    <div class="flow-step"><a href="signup.html">Yeni Üyelik</a></div>
+    <div class="flow-step"><a href="forgot-password.html">Parolamı Unuttum</a></div>
+    <div class="flow-step"><a href="password-reset-sent.html">Parola Gönderildi</a></div>
+    <div class="flow-step"><a href="reset-password-mail-template.html">Parola Maili</a></div>
+    <div class="flow-step"><a href="registration-success.html">Üyelik Başarılı</a></div>
+  </div>
+
+  <!-- Others Tree View -->
+  <h2>Others for Idea (Ağaç Yapı)</h2>
+  <ul class="tree">
+
+    <li>Organizasyon
+      <ul class="subgroup">
+        <li><a href="Organization.html">Organizasyon Kaydı</a></li>
+        <li><a href="unitorganizationchart.html">Grand Luxe Hotel - Organizasyon Şeması</a></li>
+        <li><a href="hospitalorganizationchart.html">Özel Şifa Hastanesi - Organizasyon Şeması</a></li>
+        <li><a href="universityorganizationchart.html">Özel Başarı Üniversitesi - Organizasyon Şeması</a></li>
+      </ul>
+    </li>
+
+    <li>Birimler & Kullanıcılar
+      <ul class="subgroup">
+        <li><a href="Unit.html">Birim Tanımı</a></li>
+        <li><a href="User.html">Kullanıcı Tanımı</a></li>
+      </ul>
+    </li>
+
+    <li>Checklist Yönetimi
+      <ul class="subgroup">
+        <li><a href="Checklist.html">Checklist Şablonu</a></li>
+        <li><a href="ChecklistSchedule.html">Checklist Zamanlama</a></li>
+      </ul>
+    </li>
+
+    <li>Görevler
+      <ul class="subgroup">
+        <li><a href="TaskDetail.html">Görev Detayı</a></li>
+        <li><a href="taskboard-ana-bina-kat1.html">Görev Panosu - Ana Bina Kat 1</a></li>
+        <li><a href="kat1-gorev-haritasi.html">Otel Görev Haritası</a></li>
+        <li><a href="gorev-takvimi.html">Görev Takvimi</a></li>
+        <li><a href="gorev-olustur-sihirbaz.html">Görev Oluşturma Sihirbazı</a></li>
+        <li><a href="gorev-detay.html">Görev Detay Sayfası</a></li>
+      </ul>
+    </li>
+
+    <li>Raporlama & Bildirim
+      <ul class="subgroup">
+        <li><a href="raporlama-export.html">Raporlama ve Dışa Aktarım</a></li>
+        <li><a href="bildirim-ve-uyarilar.html">Bildirim ve Uyarılar</a></li>
+        <li><a href="denetim-skoru.html">Bildirim Bazlı Denetim Skoru</a></li>
+        <li><a href="gun-sonu-ozeti.html">Gün Sonu Özeti</a></li>
+      </ul>
+    </li>
+
+    <li>Performans
+      <ul class="subgroup">
+        <li><a href="personel-performans.html">Personel Performans Paneli</a></li>
+        <li><a href="basari-panosu.html">Başarı Panosu</a></li>
+      </ul>
+    </li>
+
     <li><a href="otel-dashboard.html">Otel Genel Durum Paneli</a></li>
-    <li><a href="kat1-gorev-haritasi.html">Otel Görev Haritası</a></li>
     <li><a href="login.html">Login</a></li>
-    <li><a href="personel-performans.html">Personel Performans Paneli</a></li>
-    <li><a href="gorev-takvimi.html">Görev Takvimi</a></li>
-    <li><a href="gorev-olustur-sihirbaz.html">Görev Oluşturma Sihirbazı</a></li>
-    <li><a href="gun-sonu-ozeti.html">Gün Sonu Özeti</a></li>
-    <li><a href="denetim-skoru.html">Bildirim Bazlı Denetim SKoru</a></li>
-    <li><a href="gorev-detay.html">Görev Detay Sayfası</a></li>
-    <li><a href="raporlama-export.html">Raporlama ve Dışa Aktarım</a></li>
-    <li><a href="bildirim-ve-uyarilar.html">Bildirim Ve Uyarılar</a></li>
-    
-    <li><a href="unitorganizationchart.html">Grand Luxe Hotel - Organizasyon Şeması</a></li>
-    <li><a href="hospitalorganizationchart.html">Özel Şifa Hastanesi - Organizasyon Şeması</a></li>
-    <li><a href="universityorganizationchart.html">Özel Başarı Üniversitesi - Organizasyon Şeması</a></li>
-    <li><a href="basari-panosu.html">Başarı Panosu</a></li>
+
   </ul>
+
 </body>
 </html>
