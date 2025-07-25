@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yeni Üyelik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-6">
+  <div class="w-full max-w-4xl bg-black p-10 rounded shadow-xl border border-purple-900">
+    <div class="flex flex-col items-center mb-8">
+      <div class="bg-gray-300 w-24 h-24 flex items-center justify-center mb-4">
+        <span class="text-black font-bold">LOGO</span>
+      </div>
+      <h1 class="text-3xl font-semibold">Yeni Üyelik</h1>
+    </div>
+
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm mb-1">İSİM</label>
+        <input type="text" placeholder="Lütfen İsminizi Giriniz" class="w-full p-2 bg-black border border-white text-white" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">SOY İSİM</label>
+        <input type="text" placeholder="Lütfen Soy İsminizi Giriniz" class="w-full p-2 bg-black border border-white text-white" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">FİRMA İSMİ</label>
+        <input type="text" placeholder="Lütfen Firma İsmini Giriniz" class="w-full p-2 bg-black border border-white text-white" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">SEKTÖR</label>
+        <select class="w-full p-2 bg-black border border-white text-white">
+          <option value="">Sektörünüzü Seçiniz</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm mb-1">İLETİŞİM NUMARASI</label>
+        <input type="tel" placeholder="+90 530 330 03 53 Formatınızı Kullanınz" class="w-full p-2 bg-black border border-white text-white" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">GÖREV</label>
+        <select class="w-full p-2 bg-black border border-white text-white">
+          <option value="">Lütfen Görevinizi Seçiniz</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm mb-1">EMAIL</label>
+        <input type="email" value="deneme@otelgeliryonetimi.com" class="w-full p-2 bg-black border border-white text-white" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">PAROLA</label>
+        <input type="password" placeholder="Min 8 h., 1 büyük, 1 küçük, 1 özel karakter" class="w-full p-2 bg-black border border-white text-white" />
+      </div>
+
+      <div class="col-span-1 md:col-span-2 flex justify-center mt-4">
+        <button type="submit" class="bg-purple-500 hover:bg-purple-600 px-6 py-2 font-semibold text-white">Üye Ol</button>
+      </div>
+    </form>
+
+    <p class="text-xs text-center mt-6 text-gray-400">
+      Yeni parolanız mail adresinize gelmezse lütfen destek@otelgeliryonetimi.com<br />
+      mail adresi ile iletişime geçmeniz rica edilir.
+    </p>
+  </div>
+</body>
+</html>
