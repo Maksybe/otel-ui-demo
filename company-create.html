@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Şirket Bilgileri</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      width: 500px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 15px;
+    }
+
+    label {
+      font-size: 12px;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      background-color: #1c1c1c;
+      border: 1px solid #6859ff;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      background-color: #6859ff;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .submit-button:hover {
+      background-color: #7b6dff;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form>
+      <div class="full-width">
+        <label for="unvan">Ticari Ünvan</label>
+        <input type="text" id="unvan" placeholder="MÜŞTERİ A.Ş." />
+      </div>
+
+      <div>
+        <label for="vergiDairesi">Vergi Dairesi</label>
+        <select id="vergiDairesi">
+          <option>GÜNGÖREN</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="vergiNo">Vergi No</label>
+        <input type="text" id="vergiNo" placeholder="1234567890" />
+      </div>
+
+      <div>
+        <label for="il">İl</label>
+        <select id="il">
+          <option>İSTANBUL</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="ilce">İlçe</label>
+        <select id="ilce">
+          <option>GÜNGÖREN</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="semt">Semt</label>
+        <input type="text" id="semt" placeholder="MERTER" />
+      </div>
+
+      <div>
+        <label for="sirketTipi">Şirket Tipi</label>
+        <select id="sirketTipi">
+          <option>A.Ş.</option>
+          <option>LTD</option>
+          <option>ŞAHIS</option>
+          <option>KOOPERATİF</option>
+        </select>
+      </div>
+
+      <div class="full-width">
+        <label for="adres">Adres</label>
+        <input type="text" id="adres" placeholder="CADDESİ NO:1" />
+      </div>
+
+      <div class="full-width">
+        <button type="submit" class="submit-button">KAYDET</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
