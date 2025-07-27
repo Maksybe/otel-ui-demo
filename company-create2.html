@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şirket Kaydı</title>
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      width: 600px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-label {
+      background-color: #6859ff;
+      color: white;
+      padding: 4px 10px;
+      font-size: 13px;
+      font-weight: bold;
+      border-radius: 4px 4px 0 0;
+    }
+
+    input[type="text"],
+    select {
+      background-color: #1a1a1a;
+      border: 1px solid #6859ff;
+      color: #aaa;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    .submit-button {
+      grid-column: span 2;
+      margin-top: 20px;
+      background-color: #6859ff;
+      border: none;
+      padding: 12px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .submit-button:hover {
+      background-color: #7b6dff;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form>
+
+      <div class="form-group full-width">
+        <label class="form-label" for="unvan">Ticari Ünvan</label>
+        <input type="text" id="unvan" placeholder="MÜŞTERİ A.Ş." />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="vergiDairesi">Vergi Dairesi</label>
+        <select id="vergiDairesi">
+          <option>GÜNGÖREN</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="vergiNo">Vergi No</label>
+        <input type="text" id="vergiNo" placeholder="1234567890" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="il">İl</label>
+        <select id="il">
+          <option>İSTANBUL</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="ilce">İlçe</label>
+        <select id="ilce">
+          <option>GÜNGÖREN</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="semt">Semt</label>
+        <input type="text" id="semt" placeholder="MERTER" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="sirketTipi">Şirket Tipi</label>
+        <select id="sirketTipi">
+          <option>ŞAHIS</option>
+          <option>LTD</option>
+          <option>A.Ş.</option>
+        </select>
+      </div>
+
+      <div class="form-group full-width">
+        <label class="form-label" for="adres">Adres</label>
+        <input type="text" id="adres" placeholder="CADDESİ NO:1" />
+      </div>
+
+      <button type="submit" class="submit-button">KAYDET</button>
+
+    </form>
+  </div>
+</body>
+</html>
