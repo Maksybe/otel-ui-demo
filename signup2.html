@@ -1,84 +1,50 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yeni Üyelik</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Üye Ol</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body class="bg-black text-white">
-  <div class="min-h-screen flex items-center justify-center">
-    <div class="w-full max-w-5xl flex flex-col md:flex-row shadow-2xl">
-      <!-- Sol panel -->
-      <div class="w-full md:w-1/2 bg-black p-10 flex flex-col justify-center items-center">
-        <div class="bg-gray-300 w-20 h-20 mb-6 flex items-center justify-center">
-          <span class="text-black font-bold">LOGO</span>
-        </div>
-        <h2 class="text-2xl font-bold mb-2">Yeni Üyelik</h2>
-        <p class="text-sm text-gray-400 mb-8">Formu doldur ve üyeliğini hemen oluştur!</p>
-
-        <form class="w-full max-w-sm space-y-4">
-          <div>
-            <label class="block text-sm mb-1" for="firstName">İsim</label>
-            <input type="text" id="firstName" placeholder="Lütfen İsminizi Giriniz" class="w-full px-3 py-2 bg-black border border-white text-white" />
-          </div>
-
-          <div>
-            <label class="block text-sm mb-1" for="lastName">Soyisim</label>
-            <input type="text" id="lastName" placeholder="Lütfen Soyisminizi Giriniz" class="w-full px-3 py-2 bg-black border border-white text-white" />
-          </div>
-
-          <div>
-            <label class="block text-sm mb-1" for="company">Firma İsmi</label>
-            <input type="text" id="company" placeholder="Örnek: Otel Gelir Yönetimi A.Ş." class="w-full px-3 py-2 bg-black border border-white text-white" />
-          </div>
-
-          <div>
-            <label class="block text-sm mb-1" for="email">Email</label>
-            <input type="email" id="email" placeholder="ornek@firma.com" class="w-full px-3 py-2 bg-black border border-white text-white" />
-          </div>
-
-          <div>
-            <label class="block text-sm mb-1" for="password">Parola</label>
-            <input type="password" id="password" placeholder="Min 8 karakter, büyük, küçük ve özel karakter" class="w-full px-3 py-2 bg-black border border-white text-white" />
-          </div>
-
-          <div>
-            <label class="block text-sm mb-1" for="phone">İletişim Numarası</label>
-            <input type="tel" id="phone" placeholder="+90 5xx xxx xx xx" class="w-full px-3 py-2 bg-black border border-white text-white" />
-          </div>
-
-          <div>
-            <label class="block text-sm mb-1" for="sector">Sektör</label>
-            <select id="sector" class="w-full px-3 py-2 bg-black border border-white text-white">
-              <option value="">Sektörünüzü Seçiniz</option>
-              <option>Otel</option>
-              <option>Hastane</option>
-              <option>Fabrika</option>
-              <option>Okul</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-sm mb-1" for="role">Görev</label>
-            <select id="role" class="w-full px-3 py-2 bg-black border border-white text-white">
-              <option value="">Görevinizi Seçiniz</option>
-              <option>Yönetici</option>
-              <option>Kat Hizmeti</option>
-              <option>Teknik Personel</option>
-              <option>İdari Personel</option>
-            </select>
-          </div>
-
-          <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 rounded">Üye Ol</button>
-        </form>
-      </div>
-
-      <!-- Sağ görsel -->
-      <div class="w-full md:w-1/2">
-        <img src="https://cdn.midjourney.com/e1f8efb3-c0f3-45dc-a7e7-0ff8e24b5a49/0_1.png" alt="Signup Görseli" class="w-full h-full object-cover" />
-      </div>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-6">
+  <div class="w-full max-w-md bg-black p-8 rounded shadow-xl border border-purple-900">
+    <div class="text-center mb-6">
+      <h1 class="text-2xl font-semibold">Kayıt Ol</h1>
+      <p class="text-sm text-gray-400">Lütfen bilgilerinizi girin.</p>
     </div>
+
+    <form class="space-y-5" action="#" method="POST">
+      <div>
+        <label for="email" class="block text-sm mb-1">Email</label>
+        <input type="email" id="email" name="email" required
+          class="w-full p-2 bg-black border border-white text-white rounded" />
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm mb-1">Parola</label>
+        <input type="password" id="password" name="password" required
+          class="w-full p-2 bg-black border border-white text-white rounded" />
+      </div>
+
+      <div>
+        <label for="confirmPassword" class="block text-sm mb-1">Parola (Tekrar)</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required
+          class="w-full p-2 bg-black border border-white text-white rounded" />
+      </div>
+
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+      <button type="submit"
+        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded">
+        Kayıt Ol
+      </button>
+
+      <p class="text-sm text-gray-400 text-center mt-4">
+        Zaten hesabınız var mı? <a href="login.html" class="text-purple-400 hover:underline">Giriş yap</a>
+      </p>
+    </form>
   </div>
 </body>
 </html>
